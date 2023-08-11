@@ -1,0 +1,494 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+
+$green-color: #1a3635;
+$white-color: #ffffff;
+$padding: (
+    "xsmall":0.5rem,
+    "small":1rem,
+    "normal":2rem,
+    "large":4rem,
+    "xlarge":6rem
+);
+
+
+%section {
+    padding: map-get($padding, "large");
+    text-shadow: 1px 1px 7px #655e5b;
+
+}
+
+// * Header
+header {
+
+
+    #menu {
+        z-index: 3;
+        width: 100%;
+        background-color: $green-color;
+        position: fixed;
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0.5rem;
+            width: 8rem;
+            height: 4.4em;
+            &:hover{
+                animation: shaking 0.5s infinite;
+            }
+            @keyframes shaking {
+                0% {
+                  -webkit-transform: rotate(0deg);
+                          transform: rotate(0deg);
+                }
+                20% {
+                  -webkit-transform: rotate(-2deg);
+                          transform: rotate(-2deg);
+                }
+                50% {
+                  -webkit-transform: rotate(0deg);
+                          transform: rotate(0deg);
+                }
+                70% {
+                  -webkit-transform: rotate(2deg);
+                          transform: rotate(2deg);
+                }
+                100% {
+                  -webkit-transform: rotate(0deg);
+                          transform: rotate(0deg);
+                }
+              }
+
+        }
+
+        #nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-left: 8rem;
+            padding: map-get($padding, "xsmall");
+
+
+            a {
+                color: $white-color;
+                font-size: large;
+                font-weight: bolder;
+                padding: map-get($padding, "small") map-get($padding, "xsmall");
+                text-decoration: none;
+
+                &:hover {
+                    text-shadow: 3.5px 3.5px 5px #000000;
+                    color: #4ff0eb;
+                    transition: text-shadow 0.3s ease-in-out;
+                    transition: color 0.3s ease-in-out;
+                }
+
+            }
+
+
+
+        }
+
+    }
+
+    .landing {
+        position: relative;
+        top: 0rem;
+        left: 0;
+        width: 100%;
+        height: 80vh;
+        z-index: -1;
+
+    }
+
+    .home-wrap {
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 80vh;
+
+    }
+
+    .home-inner {
+        position: fixed;
+        width: 100%;
+        height: 80vh;
+        background: url(../images/header-pic.jpeg);
+        background-size: cover;
+        background-position: center center;
+
+        #dark {
+            width: 100%;
+            height: 80vh;
+            background-color: #2929294e;
+        }
+    }
+
+    #sec-title {
+
+        width: 100%;
+        position: absolute;
+        top: 35%;
+        text-align: center;
+        color: $white-color;
+
+        #title {
+            padding: map-get($padding, "small");
+            font-size: 4rem;
+            text-shadow: 2px 2px 5px #1d130e;
+            
+            
+        }
+         
+
+        p {
+            font-size: 1.7rem;
+            text-shadow: 2px 2px 5px #1d130e;
+        }
+
+        @media (max-width:900px) {
+            #title {
+                font-size: 3rem;
+            }
+
+            p {
+                font-size: 1.5rem;
+            }
+
+
+        }
+
+        @media (max-width:630px) {
+            #title {
+                font-size: 2rem;
+            }
+
+            p {
+                font-size: 1.2rem;
+            }
+
+
+        }
+
+    }
+}
+
+// * End Header
+//* About
+#main {
+    background-color: $white-color;
+    z-index: -2;
+
+    #icon-3 {
+        position: absolute;
+        width: 6rem;
+        margin: 1rem 2rem;
+        opacity: 0.2;
+        transform: rotate(40deg)
+    }
+
+    #about {
+        position: relative;
+        @extend %section;
+
+        h2 {
+            padding: map-get($padding, "xsmall");
+            font-size: xx-large;
+        }
+
+        p {
+            padding: map-get($padding, "xsmall");
+            letter-spacing: 1px;
+            line-height: 25px;
+        }
+
+        img {
+            position: absolute;
+            width: 9rem;
+            right: 2rem;
+            top: 16rem;
+            z-index: 1;
+            opacity: 0.2;
+        }
+    }
+
+    //* End About
+
+    // * Shopping
+
+    #shopping {
+        background-color: #a6cbca;
+        margin: 6rem 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        #shopping-pa {
+            width: 50%;
+            height: 40rem;
+            color: $white-color;
+            text-align: center;
+            padding: 10rem 2rem;
+
+            h3 {
+                font-size: 1.6rem;
+                padding: map-get($padding, "xsmall");
+            }
+
+            p {
+                font-size: larger;
+                padding: map-get($padding, "small");
+                color: $white-color;
+                margin-bottom: 2rem;
+
+            }
+
+            a {
+                font-size: medium;
+                padding: map-get($padding, "small");
+                text-decoration: none;
+                color: $white-color;
+                border: 2px $white-color solid;
+
+                border-radius: 10px;
+                &:hover{
+                    color: #4ff0eb;
+                    text-shadow: 1px 1px 5px #174442;
+                    border: 3px #4ff0eb solid;
+                    box-shadow: 1px 1px 5px #174442;
+                   
+                   
+                }
+            }
+
+            &:hover {
+                border: 3px $white-color solid;
+               
+            }
+            @media (max-width:730px) {
+                h3 {
+                    font-size: 22px;
+                }
+
+                p {
+                    font-size: 16px;
+                }
+
+            }
+
+            @media (max-width:530px) {
+
+                h3 {
+                    font-size: 20px;
+                }
+
+                p {
+                    font-size: 15px;
+                }
+
+                a {
+                    padding: map-get($padding, "small") map-get($padding, "xsmall");
+                }
+
+            }
+        }
+
+    }
+
+    #shopping-img {
+        background: url(../images/cake.jpeg);
+        background-size: cover;
+        background-position: center cover;
+        width: 50%;
+        height: 40rem;
+
+    }
+}
+
+#icon-2 {
+    width: 8rem;
+    margin-top: -6rem;
+    margin-left: 3rem;
+    opacity: 0.2;
+    transform: rotate(-20deg)
+}
+
+// * End Shopping
+
+// * Chef
+#title-bakers {
+    @extend %section;
+   margin-left: 3rem;
+    font-size: 2rem;
+}
+
+#chefs {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: map-get($padding, "normal");
+
+    .two-chefs {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+    }
+
+    .chef {
+        background-color: #ecf7f6;
+        padding: map-get($padding, "normal");
+        width: 250px;
+        height: 14 rem;
+        margin: 1rem;
+        border-radius: 10px;
+        box-shadow: 2px 2px 7px #1a3635;
+        &:hover{
+            transition: box-shadow 0.4s ease-in-out;
+            box-shadow: 2px 2px 15px 2px #1a3635;
+        }
+        .chef-img {
+
+            margin: -80px 30px 0;
+            border-radius: 50%;
+            height: 120px;
+            box-shadow: 1px 1px 7px #1a3635;
+
+        }
+
+        .chef-name {
+            padding: map-get($padding, "xsmall");
+        }
+
+        .chef-about {
+            padding: 0 map-get($padding, "xsmall");
+        }
+        .icons{
+            padding: map-get($padding , "xsmall" );
+            i{
+                padding: map-get($padding , "xsmall" );
+                font-size: 1.2rem;
+                &:hover{
+                    color: #3eb9b5;
+                    transition: color 0.4s ease-in-out;
+                }
+            }
+        }
+    }
+    @media (max-width:1200px) {
+        #title-bakers{
+         
+            margin-left: 2rem;
+        }
+    }
+    @media (max-width:1100px) {
+        .two-chefs {
+            display: block;
+        }
+
+        .chef {
+            margin:0 2rem 5rem 2rem;
+            width: 340px;
+
+            .chef-img {
+                margin: -80px 60px 0;
+            }
+        }
+    }
+    #title-bakers{
+        padding-bottom: 0;
+        
+      
+    }
+
+}
+
+@media (max-width:900px) {
+
+    #chefs {
+        display: block;
+
+        .chef {
+            margin-left: auto;
+            margin-right: auto;
+            width: 450px;
+
+            .chef-img {
+                margin-left: 100px;
+                width: 150px;
+                height: auto;
+            }
+
+            .chef-about {
+                padding: 0 map-get($padding, "xsmall") map-get($padding, "xsmall");
+            }
+            #title-bakers{
+                font-size: 1.8rem;
+            }
+        
+        }
+    }
+   
+}
+@media (max-width:650px){
+    #title-bakers{
+        margin-left: 0; 
+        font-size: 1.8rem;
+    }
+}
+// * End Chef
+
+// * Footer
+footer {
+    background-color: #285957;
+
+    #upper-footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        #short-menu {
+            a {
+                font-size: large;
+                color: $white-color;
+                text-decoration: none;
+                padding: map-get($padding, "small");
+                text-shadow: 1px 1px 5px #1d130e;
+            }
+
+            a:hover {
+                text-shadow: 3.5px 3.5px 5px #000000;
+                color: #4ff0eb;
+                transition: text-shadow 0.3s ease-in-out;
+                    transition: color 0.3s ease-in-out;
+            }
+        }
+
+        img {
+            width: 10rem;
+        }
+    }
+
+    p {
+        text-shadow: 1px 1px 5px #1d130e;
+        color: $white-color;
+        text-align: center;
+        padding: 0 map-get($padding, "small") map-get($padding, "small");
+    }
+
+
+}
+
+// * End Footer

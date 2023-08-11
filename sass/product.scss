@@ -1,0 +1,120 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+
+$green-color: #1a3635;
+$white-color: #ffffff;
+$padding: (
+    "xsmall":0.5rem,
+    "small":1rem,
+    "normal":2rem,
+    "large":4rem,
+    "xlarge":6rem
+);
+
+
+%section {
+    padding: map-get($padding, "large") map-get($padding, "large")  map-get($padding, "normal");
+    text-shadow: 1px 1px 7px #655e5b;
+}
+// * Product
+
+#product{
+   padding-top: 5.2rem;
+   
+   section{
+    @extend %section;
+    h1{
+        font-size: 2rem;
+    }
+   } 
+   
+   #flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+  
+    #img{
+        
+        padding: 0  map-get($padding, "large" ) map-get($padding, "large" ) ;
+        img{
+       width: 100%;
+        background-position: center;
+        border-radius: 10px;
+    }
+    }
+    #info{
+        padding:map-get($padding, "xsmall" ) map-get($padding, "small" ) map-get($padding, "large" ) map-get($padding, "large" );
+        h2{
+            padding:map-get($padding, "xsmall" );
+        }
+        p{
+            padding:map-get($padding, "xsmall" );
+        }
+        h5{
+            padding:map-get($padding, "xsmall" );
+            span{
+                color: red;
+                padding-right: 5px;
+            }
+        }
+        #select{
+
+            padding:map-get($padding, "xsmall" ); margin-bottom: 0.5rem;
+            select{
+                margin: 0.5rem 0;
+                padding: map-get($padding, "xsmall" );
+            }
+            span{
+                color:red;
+            }
+           
+        }
+       a{
+                margin: 0.5rem;
+                padding: map-get($padding, "xsmall" );
+                text-decoration: none;
+                color: #1a3635;
+                border: 2px solid $green-color;
+                border-radius: 5px;
+                &:hover{
+                    border: 3px solid $green-color;
+                }
+            }
+
+    }
+} 
+@media (max-width:1000px) {
+    #flex{
+       display: block;
+    }
+   #img{
+    padding: 0 map-get($padding, "large" )  ;
+   }
+  #title{
+    font-size: 1.8rem;
+  }
+}
+}
+
+// * End Product
+// *  Success
+#check{
+    width: 100%;
+    text-align: center;
+    padding:0 0 map-get($padding,"large" )0;
+   i{
+    font-size: 2rem;
+    color: green;
+    padding:map-get($padding,"xsmall" ) ;
+    border: 1px solid;
+    border-radius: 50%;
+   }
+   
+}
+// * End Success

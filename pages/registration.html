@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="you can buy best Sweet in the world.">
+    <meta name="keywords" content="registrasion,sweet">
+    <meta name="author" content="Amir Famili">
+    <meta name="robots" content="follow, index">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/registration.css">
+</head>
+
+<body>
+    <div id="dark">
+        <!-- * Header -->
+        <header>
+
+
+            <div id="menu">
+                <img src="../images/sweet.png" alt="sweet">
+                <nav id="nav">
+                    <div id="menu-left">
+                        <a href="../index.html" id="menu__left-a">Home</a>
+                        <a href="shop.html" id="menu__left-a">Shop</a>
+                        <a href="../index.html#about" id="menu__left-a">About Us</a>
+
+                    </div>
+
+                    <a href="#" id="menu__right-a">Sing Up / Log In</a>
+
+                </nav>
+            </div>
+        </header>
+        <!-- * End Header -->
+        <!-- * Registration -->
+
+        <main>
+            <div class="form-box">
+                <div class="btn-box">
+                    <div id="btn-color"></div>
+                    <button type="button" onclick="register()">Registeration</button>
+                    <button type="button" onclick="LogIn()">Log In</button>
+                </div>
+                <div id="registration">
+                    <form id="form-registration" action="index.html" enctype="multipart/form-data">
+                        <h1 id="title">Registration</h1>
+                        <hr>
+                        <div class="input-control ">
+                            <label for="fname">First name</label>
+                            <input type="text" name="fname" id="fname">
+                            <div class="error"></div>
+                        </div>
+                        <div class="input-control">
+                            <label for="lname">Last name</label>
+                            <input type="text" name="lname" id="lname">
+                            <div class="error"></div>
+                        </div>
+
+
+                        <div class="input-control">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email">
+                            <div class="error"></div>
+                        </div>
+                        <div class="input-control">
+                            <label for="password">Password</label>
+                            <input type="password" name="password" id="password">
+                            <div class="error"></div>
+                        </div>
+                        <div class="input-control">
+                            <label for="passworda">Password again</label>
+                            <input type="password" name="passworda" id="passworda">
+                            <div class="error"></div>
+                        </div>
+                        <button id="submit" type="submit">Sign Up</button>
+
+
+                    </form>
+                </div>
+                <div id="log-in">
+                    <form id="form-log-in" action="index.html" enctype="multipart/form-data">
+                        <h1 id="title">Log In</h1>
+                        <hr>
+                        <div class="input-control">
+
+                            <div class="input-control">
+                                <label for="email">Email</label>
+                                <input type="email" name="email" id="email-log-in">
+                                <div class="error"></div>
+                            </div>
+
+                            <div class="input-control">
+                                <label for="password">Password</label>
+                                <input type="password" name="password" id="password-log-in">
+                                <div class="error"></div>
+                            </div>
+
+                            <button id="submit" type="submit">Log In</button>
+
+
+                    </form>
+                </div>
+            </div>
+        </main>
+
+
+
+
+
+        <!-- * End Registration -->
+
+        <!-- * Footer -->
+
+        <footer>
+            <div id="upper-footer">
+                <div id="short-menu">
+                    <a href="../index.html">Home</a>
+                    <a href="shop.html">Shop</a>
+                    <a href="#">Sing Up / Log In</a>
+                </div>
+                <img src="../images/sweet.png" alt="Sweet">
+            </div>
+
+            <p>© 2023 Sweet Cake </p>
+        </footer>
+
+        <!-- * End Footer -->
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="../js/registration.js"></script>
+</body>
+
+</html>

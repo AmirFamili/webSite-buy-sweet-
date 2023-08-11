@@ -1,0 +1,79 @@
+main section {
+  padding: 1rem;
+  text-shadow: 1px 1px 7px #655e5b;
+  color: #142726;
+}
+main section h1 {
+  padding: 1rem;
+  font-size: 1.9rem;
+}
+
+main {
+  padding-top: 4.5rem;
+}
+main #products {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+main #products .product {
+  width: 13rem;
+  height: 19rem;
+  text-align: center;
+  background-color: #cfdad7;
+  margin: 1.5rem 0.5rem;
+  padding: 0 0 1rem;
+  border-radius: 5px;
+  -webkit-box-shadow: 1px 1px 5px #343c38;
+          box-shadow: 1px 1px 5px #343c38;
+}
+main #products .product:hover {
+  -webkit-box-shadow: 2px 2px 20px 0px #1a3635;
+          box-shadow: 2px 2px 20px 0px #1a3635;
+  -webkit-transition: -webkit-box-shadow 0.3s ease-in-out;
+  transition: -webkit-box-shadow 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+}
+main #products .product:hover img {
+  border: #2e6a68 3px solid;
+  -webkit-transition: border 0.3s ease-in-out;
+  transition: border 0.3s ease-in-out;
+}
+main #products .product img {
+  width: 8rem;
+  height: 8rem;
+  border: #1a3635 2px solid;
+  border-radius: 50%;
+  margin-top: -2rem;
+}
+main #products .product h3 {
+  padding: 0.5rem 1rem 0;
+  color: #142726;
+}
+main #products .product .star {
+  padding: 0.5rem;
+  color: rgb(226, 229, 13);
+}
+main #products .product p {
+  padding: 0.5rem 0.5rem 2rem;
+}
+main #products .product a {
+  padding: 0.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+}
+main #products .product a:hover {
+  border: 3px solid #ffffff;
+}
